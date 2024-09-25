@@ -5,7 +5,7 @@ import { IconQuestionMark } from "@tabler/icons-react";
 
 export default function Navbar() {
   return (
-    <div className="z-50 mx-auto mb-8 flex h-16 w-screen bg-white text-primary-foreground">
+    <div className="z-50 mx-auto mb-8 flex h-16  bg-white text-primary-foreground">
       <div className="container mx-auto flex items-center justify-between py-4">
         <div className="ml-[58px] flex items-center gap-8">
           <Link href="/">
