@@ -22,6 +22,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <title>Wash Wow</title>
+      </head>
       <body className={`${lato.variable} antialiased`}>
         <Navbar />
         {children}
