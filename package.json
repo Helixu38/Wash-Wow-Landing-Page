@@ -19,7 +19,8 @@
     "wash-wow-landing-page": "file:"
   },
   "devDependencies": {
-    "@types/node": "^20",
+    "@commitlint/config-conventional": "^19.5.0",
+    "@types/node": "^20.16.7",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
@@ -30,6 +31,7 @@
     "postcss": "^8",
     "prettier": "3.3.3",
     "tailwindcss": "^3.4.1",
+    "ts-node": "^10.9.2",
     "typescript": "^5"
   }
 }
