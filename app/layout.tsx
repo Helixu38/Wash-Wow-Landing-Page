@@ -1,6 +1,15 @@
 import type { Metadata } from "next";
+import { Lato } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
+import Navbar from "@/components/navigation/navbar";
+import Footer from "@/components/ui/footer";
+
+const lato = Lato({
+  subsets: ["latin"],
+  weight: ["400", "700"], // Normal and bold weights
+  variable: "--font-lato", // Optional variable name for custom usage
+});
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -25,10 +34,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${lato.variable} antialiased`}>
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
