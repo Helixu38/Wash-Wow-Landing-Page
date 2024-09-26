@@ -29,13 +29,6 @@ export default function Footer() {
           <div className="cursor-pointer">Về chúng tôi</div>
         </div>
       </div>
-
-      <div className="absolute bottom-4 left-0 right-0 text-center text-white font-medium text-sm">
-        Địa chỉ: Lô E2a-7, Đường D1, Long Thạnh Mỹ, Thành Phố Thủ Đức, Thành phố
-        Hồ Chí Minh, Việt Nam
-        <br />
-        Điện thoại: 0813547139 Email: hello.washnwow@gmail.com
-      </div>
     </div>
   );
 }
