@@ -8,10 +8,11 @@ export default function Content() {
       <div className="relative flex  w-full h-[1244px]">
         <Image
           className="absolute top-[-120px] right-0 mr-[249px]"
-          src="/img/hero/laundryphone.png"
+          src="/img/hero/1.png"
           alt="Hero Image"
           width={345}
           height={690}
+          unoptimized={true}
         />
         <div className="ml-[263px] mt-[50px] max-w-[560px] max-h-[144px] text-primary">
           <h1 className="text-5xl font-bold">
@@ -28,17 +29,18 @@ export default function Content() {
           </p>
           <Image
             className="absolute mt-[55px]"
-            src="/img/hero/timeslotphone.png"
+            src="/img/hero/2.png"
             alt="Hero Image"
             width={345}
             height={690}
+            unoptimized={true}
           />
         </div>
         <div className="ml-auto mt-[794px] max-w-[560px] text-primary text-right mr-[255px] ">
           <h2 className="text-2xl font-bold mt-[37px]">
             Linh hoạt thời gian, nhận hàng bất kỳ lúc nào
           </h2>
-          <p className="mt-[21px] font-medium">
+          <p className="mt-[21px] font-medium text-justify">
             Wash&Wow cho phép người dùng đặt lịch giặt ủi theo thời gian linh
             hoạt, dễ dàng chọn giờ giao nhận phù hợp. Bạn có thể nhận đồ giặt
             sạch vào bất kỳ lúc nào thuận tiện, mang lại sự tiện lợi tối đa.

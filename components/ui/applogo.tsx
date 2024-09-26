@@ -7,10 +7,11 @@ const AppLogo = ({ ...props }) => (
   // merge props.className with cva
   <div className={logoVariants({ className: props.className })}>
     <Image
-      src="/img/logo/Layer 1.png"
+      src="/img/logo/Logo blue.svg"
       width={239}
       height={36}
       alt="Picture of the author"
+      unoptimized={true}
     />
   </div>
 );

@@ -8,10 +8,11 @@ export default function ContentBottom() {
         <div className="ml-[263px] max-w-[560px] max-h-[144px] text-primary">
           <Image
             className="absolute mt-[59px]"
-            src="/img/hero/phonewallet.png"
+            src="/img/hero/3.png"
             alt="Hero Image"
             width={345}
             height={690}
+            unoptimized={true}
           />
           <h2 className="text-2xl font-bold mt-[926px]">
             Giặt ở mọi nơi, tìm nơi gần bạn nhất
@@ -28,11 +29,11 @@ export default function ContentBottom() {
             Trở thành đối tác?Đăng ký dễ dàng.
           </h1>
 
-          <div className="mt-[200px] text-right">
-            <h2 className="text-2xl font-bold ">
+          <div className="flex flex-col justify-center mt-[200px] text-right ml-[80px]">
+            <h2 className="text-2xl font-bold">
               Thu nhập dễ dàng, rút tiền nhanh chóng
             </h2>
-            <p className="mt-[21px] font-medium">
+            <p className="mt-[21px] font-medium text-justify">
               Wash&Wow không chỉ hỗ trợ khách hàng mà còn mang đến lợi ích cho
               các đối tác giặt sấy. Ứng dụng giúp đối tác dễ dàng quản lý đơn
               hàng, tăng thu nhập, và rút tiền nhanh chóng qua các phương thức
@@ -42,17 +43,19 @@ export default function ContentBottom() {
 
           <Image
             className="absolute mt-[59px]"
-            src="/img/hero/laundrystatusphone.png"
+            src="/img/hero/4.png"
             alt="Hero Image"
             width={345}
             height={690}
+            unoptimized={true}
           />
           <Image
             className="absolute right-16 mt-[59px]"
-            src="/img/hero/orderphone.png"
+            src="/img/hero/5.png"
             alt="Hero Image"
             width={345}
             height={690}
+            unoptimized={true}
           />
         </div>
       </div>
