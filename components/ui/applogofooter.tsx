@@ -11,6 +11,7 @@ const AppLogoFooter = ({ ...props }) => (
       width={398}
       height={60.99}
       alt="Picture of the author"
+      unoptimized={true}
     />
   </div>
 );
