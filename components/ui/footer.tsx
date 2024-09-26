@@ -4,7 +4,7 @@ import { AppLogoFooter } from "../ui/applogofooter";
 
 export default function Footer() {
   return (
-    <div className="relative z-50 mx-auto mb-8 flex h-[281px] bg-primary text-primary-foreground">
+    <div className="z-50 mx-auto flex h-[281px] bg-primary text-primary-foreground">
       <div className="container mx-auto flex items-center justify-between py-4">
         {/* Main content on the left side */}
         <div className="ml-[58px] flex items-start">
@@ -28,13 +28,6 @@ export default function Footer() {
           <div className="cursor-pointer">Thông tin</div>
           <div className="cursor-pointer">Về chúng tôi</div>
         </div>
-      </div>
-
-      <div className="absolute bottom-4 left-0 right-0 text-center text-white font-medium text-sm">
-        Địa chỉ: Lô E2a-7, Đường D1, Long Thạnh Mỹ, Thành Phố Thủ Đức, Thành phố
-        Hồ Chí Minh, Việt Nam
-        <br />
-        Điện thoại: 0813547139 Email: hello.washnwow@gmail.com
       </div>
     </div>
   );
