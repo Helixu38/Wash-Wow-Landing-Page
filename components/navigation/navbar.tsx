@@ -13,7 +13,9 @@ export default function Navbar() {
           </Link>
         </div>
         <div className="items-center gap-[68px] sm:flex mr-[58px] text-primary font-medium">
-          <div className="cursor-pointer">Tải app ngay</div>
+          <Link href="/download" className="cursor-pointer">
+            Tải app ngay
+          </Link>
           <Link href="/about-us" className="cursor-pointer">
             Về chúng tôi
           </Link>
