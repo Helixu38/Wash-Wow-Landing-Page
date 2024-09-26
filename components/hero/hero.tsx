@@ -5,12 +5,13 @@ import { IconDownload } from "@tabler/icons-react";
 
 export default function Hero() {
   return (
-    <div className="relative w-full h-[500px]">
+    <div className="relative w-screen h-[500px]">
       <Image
         src="/img/hero/hero.png"
         alt="Hero Image"
         layout="fill"
-        objectPosition="center"
+        className="xl:bg-cover"
+        unoptimized={true}
       />
 
       <div className="absolute inset-0">
@@ -18,7 +19,7 @@ export default function Hero() {
           src="/img/hero/gradient.png"
           alt="Gradient Overlay"
           layout="fill"
-          objectPosition="center"
+          unoptimized={true}
         />
       </div>
 
