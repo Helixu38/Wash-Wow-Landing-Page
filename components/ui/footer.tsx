@@ -8,7 +8,9 @@ export default function Footer() {
     <div className="w-full h-[313px] bg-primary">
       <div className="flex flex-row justify-between mx-[61px] pt-[29px]">
         <div className="flex flex-col max-w-[398px]">
-          <AppLogoFooter></AppLogoFooter>
+          <Link href="/">
+            <AppLogoFooter></AppLogoFooter>
+          </Link>
           <p className="font-medium text-sm text-white mt-[10px]">
             Wash&Wow là một nền tảng kết nối khách hàng với các cửa hàng giặt
             sấy địa phương. Người dùng có thể kiểm tra tình trạng sẵn có của máy

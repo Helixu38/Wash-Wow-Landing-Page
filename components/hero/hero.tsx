@@ -5,7 +5,7 @@ import { IconDownload } from "@tabler/icons-react";
 
 export default function Hero() {
   return (
-    <div className="relative w-screen h-[500px]">
+    <div className="relative w-full h-[500px]">
       <Image
         src="/img/hero/hero.png"
         alt="Hero Image"
