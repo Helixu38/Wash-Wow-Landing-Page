@@ -4,7 +4,7 @@ import { AppLogoFooter } from "../ui/applogofooter";
 
 export default function Footer() {
   return (
-    <div className="relative z-50 mx-auto mb-8 flex h-[281px] bg-primary text-primary-foreground">
+    <div className="z-50 mx-auto flex h-[281px] bg-primary text-primary-foreground">
       <div className="container mx-auto flex items-center justify-between py-4">
         {/* Main content on the left side */}
         <div className="ml-[58px] flex items-start">
