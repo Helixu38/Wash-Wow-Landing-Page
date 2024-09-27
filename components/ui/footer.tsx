@@ -57,10 +57,16 @@ export default function Footer() {
           <div className="flex flex-col text-xl text-white">
             <h3>Thông tin</h3>
             <div className="text-xs font-medium mt-[7px]">
-              <p>Câu hỏi thường gặp</p>
-              <p className="mt-[6px]">Liên hệ đăng ký đối tác</p>
+              <Link href={"/question"}>
+                <p>Câu hỏi thường gặp</p>
+              </Link>
+              <Link href={"/partner"}>
+                <p className="mt-[6px]">Liên hệ đăng ký đối tác</p>
+              </Link>
               <p className="mt-[6px]">Kênh đối tác</p>
-              <p className="mt-[6px]">Điều khoản sử dụng dịch vụ</p>
+              <Link href={"/terms-condition"}>
+                <p className="mt-[6px]">Điều khoản sử dụng dịch vụ</p>
+              </Link>
             </div>
           </div>
           <div className="flex flex-col text-xl text-white">
