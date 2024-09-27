@@ -22,20 +22,36 @@ export default function Footer() {
           <div className="flex flex-col text-xl text-white">
             <h3>Liên hệ chúng tôi tại</h3>
             <div className="flex flex-row mt-[7px] gap-[20px]">
-              <Image
-                src="/img/icon/facebook.png"
-                width={41}
-                height={41}
-                alt="facebook's logo"
-                unoptimized={true}
-              ></Image>
-              <Image
-                src="/img/icon/instagram.png"
-                width={41}
-                height={41}
-                alt="facebook's logo"
-                unoptimized={true}
-              ></Image>
+              <Link
+                href={
+                  "https://www.facebook.com/profile.php?id=61566322670193&mibextid=ZbWKwL"
+                }
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src="/img/icon/facebook.png"
+                  width={41}
+                  height={41}
+                  alt="facebook's logo"
+                  unoptimized={true}
+                ></Image>
+              </Link>
+              <Link
+                href={
+                  "https://www.instagram.com/washandwow_?igsh=MWM4NnRrbWw4c2dweA=="
+                }
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src="/img/icon/instagram.png"
+                  width={41}
+                  height={41}
+                  alt="facebook's logo"
+                  unoptimized={true}
+                ></Image>
+              </Link>
             </div>
           </div>
           <div className="flex flex-col text-xl text-white">
