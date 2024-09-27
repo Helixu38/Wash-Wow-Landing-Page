@@ -5,31 +5,22 @@ import { IconQuestionMark } from "@tabler/icons-react";
 
 export default function Navbar() {
   return (
-    <div className="w-full h-[88px] flex flex-row justify-between pl-[58px] pt-[26px]">
-      <div>
-        <AppLogo></AppLogo>
+    <div className="w-full h-[88px] flex flex-row justify-between items-center px-4 md:px-[58px] font-medium text-xl text-primary">
+      <div className="flex items-center">
+        <Link href="/">
+          <AppLogo />
+        </Link>
       </div>
-      <div>Testing</div>
+
+      <div className="flex flex-row items-center gap-4 md:gap-[68px]">
+        <Link href={"/download"}>
+          <p className="hidden md:block">Tải app ngay</p>
+        </Link>
+        <p className="hidden md:block">Về chúng tôi</p>
+        <div className="flex items-center justify-center w-10 h-10 rounded-full bg-primary">
+          <IconQuestionMark color="white" size={20} />
+        </div>
+      </div>
     </div>
-    // <div className="z-50 mx-auto flex h-16  bg-white text-primary-foreground shadow-lg">
-    //   <div className="container mx-auto flex items-center justify-between py-4">
-    //     <div className="ml-[58px] flex items-center gap-8">
-    //       <Link href="/">
-    //         <AppLogo className="text-xl" />
-    //       </Link>
-    //     </div>
-    //     <div className="items-center gap-[68px] sm:flex mr-[58px] text-primary font-medium">
-    //       <Link href="/download" className="cursor-pointer">
-    //         Tải app ngay
-    //       </Link>
-    //       <Link href="/about-us" className="cursor-pointer">
-    //         Về chúng tôi
-    //       </Link>
-    //       <div className="flex items-center justify-center w-8 h-8 rounded-full bg-primary">
-    //         <IconQuestionMark color="white" size={20} />
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
   );
 }
