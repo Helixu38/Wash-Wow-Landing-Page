@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Navbar from "@/components/navigation/navbar";
-import Footer from "@/components/ui/footer";
 
 const lato = localFont({
   src: "./fonts/lato-regular.woff",
@@ -27,11 +25,7 @@ export default function RootLayout({
         <title>Wash Wow</title>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
-      <body className={`${lato.variable} antialiased`}>
-        <Navbar />
-        {children}
-        <Footer />
-      </body>
+      <body className={`${lato.variable} antialiased`}>{children}</body>
     </html>
   );
 }
