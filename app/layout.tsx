@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Navbar from "@/components/navigation/navbar";
-import Footer from "@/components/ui/footer";
 
 const lato = localFont({
   src: "./fonts/lato-regular.woff",
