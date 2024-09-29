@@ -22,7 +22,7 @@ export default function LoginForm() {
 
     if (role) {
       console.log("Login successful, role:", role);
-      if (role === "Customer") {
+      if (role != null) {
         router.push("/admin/dashboard"); // Redirect to the admin dashboard
       }
     } else {
