@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { fetchForm, Form, FormFieldValue } from "@/lib/services/fetch";
 import { Button } from "@/components/ui/button";
 import { updateFormStatus } from "@/lib/services/form";
+import { updateUserRole } from "@/lib/services/form"; // Import the updateUserRole function
 import Image from "next/image";
 
 export default function Dashboard() {
@@ -25,20 +26,34 @@ export default function Dashboard() {
   }, []);
 
   const handleApprove = async (formID: string) => {
+    const userID = "ab5f9c9ef6c2410cadd126e027caef06"; // Hard-coded user ID
     const result = await updateFormStatus(formID, "APPROVED");
     if (result) {
       console.log("Form approved:", result);
-      await loadForms();
+      const roleUpdateResult = await updateUserRole(userID, "SHOP_OWNER"); // Change the role to SHOP_OWNER
+      if (roleUpdateResult) {
+        console.log("User role updated to SHOP_OWNER:", roleUpdateResult);
+      } else {
+        setError("Failed to update user role.");
+      }
+      await loadForms(); // Refetch forms after update
     } else {
       setError("Failed to approve form.");
     }
   };
 
   const handleReject = async (formID: string) => {
+    const userID = "ab5f9c9ef6c2410cadd126e027caef06"; // Hard-coded user ID
     const result = await updateFormStatus(formID, "REJECTED");
     if (result) {
       console.log("Form rejected:", result);
-      await loadForms();
+      const roleUpdateResult = await updateUserRole(userID, "CUSTOMER"); // Change the role to CUSTOMER
+      if (roleUpdateResult) {
+        console.log("User role updated to CUSTOMER:", roleUpdateResult);
+      } else {
+        setError("Failed to update user role.");
+      }
+      await loadForms(); // Refetch forms after update
     } else {
       setError("Failed to reject form.");
     }
@@ -52,7 +67,7 @@ export default function Dashboard() {
       {forms.length > 0 ? (
         forms.map((form) => (
           <div
-            key={form.id} // Use the form ID here
+            key={form.id}
             className="bg-white shadow-md rounded-lg p-6 mt-6 flex flex-col gap-4"
           >
             <h3 className="text-2xl font-bold">{form.status}</h3>
@@ -89,13 +104,13 @@ export default function Dashboard() {
             <div className="flex w-full max-w-sm gap-10">
               <Button
                 className="bg-primary font-medium text-white text-xl"
-                onClick={() => handleApprove(form.id)} // Use form.id for approval
+                onClick={() => handleApprove(form.id)} // Call handleApprove with the form ID
               >
                 Approve
               </Button>
               <Button
                 className="bg-red-500 font-medium text-white text-xl"
-                onClick={() => handleReject(form.id)} // Use form.id for rejection
+                onClick={() => handleReject(form.id)}
               >
                 Reject
               </Button>

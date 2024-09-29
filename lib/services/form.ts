@@ -40,7 +40,7 @@ export const updateUserRole = async (
 
     return response.data;
   } catch (error) {
-    console.error("Error updating form status:", error);
+    console.error("Error updating user's role status:", error);
     return null;
   }
 };
