@@ -27,11 +27,7 @@ export default function RootLayout({
         <title>Wash Wow</title>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
-      <body className={`${lato.variable} antialiased`}>
-        <Navbar />
-        {children}
-        <Footer />
-      </body>
+      <body className={`${lato.variable} antialiased`}>{children}</body>
     </html>
   );
 }
