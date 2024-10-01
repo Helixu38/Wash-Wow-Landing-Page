@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <title>Wash Wow</title>
+        <title>Wash@Wow</title>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body className={`${lato.variable} antialiased`}>{children}</body>
