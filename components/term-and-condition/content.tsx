@@ -42,13 +42,13 @@ export default function Content() {
           2. Trách Nhiệm Của Khách Hàng
         </h3>
 
-        <h4 className="font-semibold ">2.1 Tuân Thủ Pháp Luật</h4>
+        <h4 className="font-semibold mt-[20px]">2.1 Tuân Thủ Pháp Luật</h4>
         <p className="mb-4 font-medium">
           Khách hàng phải tuân thủ các quy định của pháp luật Việt Nam trong
           suốt quá trình sử dụng dịch vụ của Wash&Wow.
         </p>
 
-        <h4 className="font-semibold ">2.2 Cung Cấp Thông Tin Chính Xác</h4>
+        <h4 className="font-semibold">2.2 Cung Cấp Thông Tin Chính Xác</h4>
         <p className="mb-[27px] font-medium">
           Khách hàng có trách nhiệm cung cấp thông tin chính xác khi đăng ký tài
           khoản và đặt dịch vụ, bao gồm họ tên, địa chỉ, và thông tin liên lạc.
@@ -68,23 +68,29 @@ export default function Content() {
         <h3 className="font-bold text-3xl mb-2">
           3. Các Hình Thức Sử Dụng Không Được Chấp Nhận
         </h3>
-        <p className="mb-4 font-medium">
-          Khách hàng không được phép sử dụng dịch vụ của Wash&Wow để gây tổn
-          hại, xâm nhập trái phép hệ thống của chúng tôi hoặc các đối tác. Không
-          được phát tán mã độc, virus hoặc thực hiện hành vi phá hoại khác.
-        </p>
+        <p className="mb-4 font-medium">Khách hàng không được phép:</p>
+        <ul className="list-disc list-inside text-primary mb-4 font-medium">
+          <li>
+            Sử dụng dịch vụ của Wash&Wow để gây tổn hại, xâm nhập trái phép hệ
+            thống của chúng tôi hoặc các đối tác.
+          </li>
+          <li>
+            Phát tán các mã độc, virus hay thực hiện các hành vi phá hoại khác.
+          </li>
+          <li>Cung cấp hoặc phát tán nội dung vi phạm pháp luật.</li>
+        </ul>
 
         <h3 className="font-bold text-3xl mb-2">4. Thanh Toán Và Hoàn Trả</h3>
 
-        <h4 className="font-semibold mb-2">4.1 Thanh Toán</h4>
+        <h4 className="font-semibold mt-[20px]">4.1 Thanh Toán</h4>
         <p className="mb-4 font-medium">
           Khách hàng phải thanh toán đầy đủ các khoản phí theo quy định khi sử
           dụng dịch vụ. Thông tin chi phí sẽ được hiển thị rõ ràng trước khi đặt
           lịch giặt sấy.
         </p>
 
-        <h4 className="font-semibold mb-2">4.2 Chính Sách Hoàn Trả</h4>
-        <p className="mb-4 font-medium">
+        <h4 className="font-semibold">4.2 Chính Sách Hoàn Trả</h4>
+        <p className="mb-[27px] font-medium">
           Chúng tôi sẽ hoàn tiền trong các trường hợp sau: Wash&Wow ngừng cung
           cấp dịch vụ sau khi khách hàng đã thanh toán. Dịch vụ không được cung
           cấp trong vòng 48 giờ kể từ khi đặt hàng.
@@ -93,9 +99,17 @@ export default function Content() {
         <h3 className="font-bold text-3xl mb-2">5. Ngừng Cung Cấp Dịch Vụ</h3>
         <p className="mb-4 font-medium">
           Wash&Wow có quyền ngừng cung cấp dịch vụ nếu khách hàng vi phạm các
-          điều khoản sau: Cung cấp thông tin sai lệch, gây tổn hại cho hệ thống
-          hoặc đối tác.
+          điều khoản sau:
         </p>
+        <ul className="list-disc list-inside text-primary mb-4 font-medium">
+          <li>
+            Cung cấp thông tin sai lệch, gây tổn hại cho hệ thống hoặc đối tác.
+          </li>
+          <li>
+            Vi phạm các quy định liên quan đến an toàn và bảo mật dịch vụ.
+          </li>
+          <li>Không thanh toán chi phí sau khi đã quá hạn.</li>
+        </ul>
 
         <h3 className="font-bold text-3xl mb-2">
           6. Thay Đổi Điều Khoản Sử Dụng
