@@ -1,4 +1,6 @@
+import { LaundryShopTable } from "@/components/ui/laundry_shop_table";
+
 const LaundryShopPage = async () => {
-  return <div>Hello</div>;
+  return <LaundryShopTable />;
 };
 export default LaundryShopPage;

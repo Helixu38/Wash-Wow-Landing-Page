@@ -1,3 +1,5 @@
+import axios from "axios";
+
 const baseUrl = "https://localhost:7276";
 
 export interface FormFieldValue {
@@ -7,7 +9,7 @@ export interface FormFieldValue {
 }
 
 export interface FormImage {
-  url: string; // Add a new interface for the form image
+  url: string;
 }
 
 export interface Form {
@@ -16,7 +18,7 @@ export interface Form {
   formTemplateID: number;
   title: string;
   fieldValues: FormFieldValue[];
-  formImages: FormImage[]; // Include the formImages field
+  formImages: FormImage[];
 }
 
 export interface FetchFormResponse {
@@ -43,3 +45,49 @@ export async function fetchForm(): Promise<FetchFormResponse | null> {
     return null;
   }
 }
+
+export interface LaundryShop {
+  id: string;
+  address: string;
+  name: string;
+  phoneContact: string;
+  totalMachines: number;
+  wallet: number;
+  status: string;
+  openingHour: OperatingHours;
+  closingHour: OperatingHours;
+  ownerID: string;
+}
+
+interface OperatingHours {
+  ticks: number;
+  days: number;
+  hours: number;
+  milliseconds: number;
+  microseconds: number;
+  nanoseconds: number;
+  minutes: number;
+  seconds: number;
+  totalDays: number;
+  totalHours: number;
+  totalMilliseconds: number;
+  totalMicroseconds: number;
+  totalNanoseconds: number;
+  totalMinutes: number;
+  totalSeconds: number;
+}
+
+export const fetchLaundryShops = async (
+  pageNo: number,
+  pageSize: number,
+): Promise<LaundryShop[]> => {
+  try {
+    const response = await axios.get<{ value: LaundryShop[] }>(
+      `${baseUrl}?pageNo=${pageNo}&pageSize=${pageSize}`,
+    );
+    return response.data.value; // Extracting the array of LaundryShop
+  } catch (error) {
+    console.error("Error fetching laundry shops:", error);
+    throw error; // Rethrow the error for further handling if needed
+  }
+};
