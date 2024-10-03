@@ -240,7 +240,7 @@ export function LaundryShopTable() {
   }, [pageNo, pageSize]);
 
   if (loading) return <div>Loading...</div>;
-  if (error) return <div>{error}</div>;
+  if (error) return <div className="text-red-600">{error}</div>;
 
   return (
     <div className="w-full">
