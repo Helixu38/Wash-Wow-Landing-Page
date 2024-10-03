@@ -4,8 +4,8 @@ import { AppLogo } from "../ui/applogo";
 
 export default function AdminNavbar() {
   return (
-    <div className="w-full h-[88px] flex flex-row items-end px-4 md:px-[58px] font-medium text-xl text-primary">
-      <div className="flex items-end">
+    <div className="w-full container fixed flex md:px-[58px] font-medium text-xl text-primary">
+      <div className="flex items-end pt-2">
         <Link href={"/admin"}>
           <AppLogo />
         </Link>

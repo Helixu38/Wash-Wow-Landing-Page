@@ -33,7 +33,7 @@ export default function LoginForm() {
   };
 
   return (
-    <div className="w-full h-full flex flex-col px-4 md:px-[58px] font-extrabold text-3xl text-primary gap-y-[39px] pt-[17px]">
+    <div className="w-full h-full flex flex-col px-4 md:px-[58px] font-extrabold text-3xl text-primary gap-y-[39px] pt-[17px] mt-[100px]">
       <h2>Log in</h2>
       <div className="grid w-full max-w-sm items-center gap-1.5">
         <Label className="text-xl font-medium" htmlFor="username">
@@ -74,11 +74,9 @@ export default function LoginForm() {
           disabled={loading} // Disable button when loading
         >
           {loading ? "Logging in..." : "Login"}{" "}
-          {/* Change button text based on loading state */}
         </Button>
       </div>
       {error && <div className="text-red-500 text-sm">{error}</div>}{" "}
-      {/* Show error message */}
     </div>
   );
 }
