@@ -71,7 +71,38 @@ const fetchLaundryShops = async (
       status: "closed",
       totalMachines: 8,
     },
-    // Add more data as needed
+    {
+      id: "3",
+      name: "Laundry Express",
+      address: "789 Maple Ave",
+      phoneContact: "555-9876",
+      status: "open",
+      totalMachines: 6,
+    },
+    {
+      id: "4",
+      name: "Laundry World",
+      address: "321 Oak St",
+      phoneContact: "555-1357",
+      status: "pending",
+      totalMachines: 5,
+    },
+    {
+      id: "5",
+      name: "Wash & Go",
+      address: "654 Pine St",
+      phoneContact: "555-2468",
+      status: "open",
+      totalMachines: 7,
+    },
+    {
+      id: "6",
+      name: "Eco Wash",
+      address: "111 Cedar St",
+      phoneContact: "555-8642",
+      status: "closed",
+      totalMachines: 4,
+    },
   ];
   return data.slice((pageNo - 1) * pageSize, pageNo * pageSize); // Simulate pagination
 };
@@ -129,9 +160,7 @@ export const columns: ColumnDef<LaundryShop>[] = [
   {
     accessorKey: "totalMachines",
     header: "Total Machines",
-    cell: ({ row }) => (
-      <div className="text-right">{row.getValue("totalMachines")}</div>
-    ),
+    cell: ({ row }) => <div>{row.getValue("totalMachines")}</div>,
   },
   {
     id: "actions",
@@ -167,7 +196,7 @@ export function LaundryShopTable() {
   const [loading, setLoading] = React.useState<boolean>(true);
   const [error, setError] = React.useState<string | null>(null);
   const [pageNo, setPageNo] = React.useState<number>(1);
-  const [pageSize, setPageSize] = React.useState<number>(10);
+  const [pageSize] = React.useState<number>(5); // Fixed page size to 5
   const [sorting, setSorting] = React.useState<SortingState>([]);
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
     [],
@@ -247,6 +276,7 @@ export function LaundryShopTable() {
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
+
       <div className="rounded-md border">
         <Table>
           <TableHeader>
@@ -295,27 +325,27 @@ export function LaundryShopTable() {
           </TableBody>
         </Table>
       </div>
+
       <div className="flex items-center justify-end space-x-2 py-4">
         <div className="flex-1 text-sm text-muted-foreground">
           {table.getFilteredSelectedRowModel().rows.length} of{" "}
           {table.getFilteredRowModel().rows.length} row(s) selected.
         </div>
-        <div className="space-x-2">
+        <div className="flex items-center space-x-2">
+          <span className="item">
+            Page {pageNo} of {Math.ceil(laundryShops.length / pageSize)}
+          </span>
           <Button
             variant="outline"
-            size="sm"
             onClick={() => setPageNo((prev) => Math.max(prev - 1, 1))}
-            disabled={!table.getCanPreviousPage()}
+            disabled={pageNo === 1}
           >
             Previous
           </Button>
           <Button
             variant="outline"
-            size="sm"
-            onClick={() =>
-              setPageNo((prev) => Math.min(prev + 1, table.getPageCount()))
-            }
-            disabled={!table.getCanNextPage()}
+            onClick={() => setPageNo((prev) => prev + 1)}
+            disabled={laundryShops.length < pageSize}
           >
             Next
           </Button>
