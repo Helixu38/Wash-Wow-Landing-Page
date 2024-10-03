@@ -21,12 +21,12 @@ export default function Content() {
           <DropdownMenuTrigger asChild>
             <ul className="flex flex-row justify-center items-center cursor-pointer w-[800px] mx-auto mb-[35px]">
               <div className="border-primary border-3 rounded-full flex justify-center items-center">
-                <IconQuestionMark className="text-primary" />
+                <IconQuestionMark className="text-primary flex-shrink-0" />
               </div>
               <span className="ml-[28.5px] flex-grow text-left">
                 Quy trình giặt ủi đặt qua ứng dụng được hoạt động như thế nào?
               </span>
-              <IconChevronDown className="text-primary" />
+              <IconChevronDown className="text-primary flex-shrink-0" />
             </ul>
           </DropdownMenuTrigger>
 
@@ -34,9 +34,15 @@ export default function Content() {
             <DropdownMenuLabel>Trả lời</DropdownMenuLabel>
             <DropdownMenuSeparator />
             <DropdownMenuItem>
-              Quy trình giặt ủi được hoạt động bằng cách bạn đặt đơn qua ứng
-              dụng và lựa chọn tiệm gần nhất để xử lý đơn hàng. Đội ngũ sẽ đến
-              lấy đồ và giao trả đúng giờ.
+              <ol className="list-none pl-5">
+                <li>
+                  Bước 1: Khách hàng chọn cửa hàng giặt sấy gần vị trí của mình.
+                </li>
+                <li>Bước 2: Chọn cửa hàng mà mình muốn đặt.</li>
+                <li>Bước 3: Chọn khung giờ và máy trống để sử dụng.</li>
+                <li>Bước 4: Điền các thông tin cần thiết vào mẫu.</li>
+                <li>Bước 5: Thanh toán qua ứng dụng để hoàn tất đặt đơn.</li>
+              </ol>
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
@@ -48,7 +54,7 @@ export default function Content() {
                 <IconQuestionMark className="text-primary" />
               </div>
               <span className="ml-[28.5px] flex-grow text-left">
-                Quy trình nhận đơn và thanh toán dành cho đối tác như thế nào?
+                [Quý đối tác] Quy trình nhận đơn và thanh toán
               </span>
               <IconChevronDown className="text-primary" />
             </ul>
@@ -58,9 +64,19 @@ export default function Content() {
             <DropdownMenuLabel>Trả lời</DropdownMenuLabel>
             <DropdownMenuSeparator />
             <DropdownMenuItem>
-              Quy trình giặt ủi được hoạt động bằng cách bạn đặt đơn qua ứng
-              dụng và lựa chọn tiệm gần nhất để xử lý đơn hàng. Đội ngũ sẽ đến
-              lấy đồ và giao trả đúng giờ.
+              <ol className="list-none pl-5">
+                <li>Bước 1: Thông báo sẽ được chuyển đến quý đối tác.</li>
+                <li>
+                  Bước 2: Quý đối tác nhấn vào thông báo đơn và xác nhận thông
+                  tin đặt thời gian.
+                </li>
+                <li>Bước 3: Khách hàng mang quần áo đến.</li>
+                <li>
+                  Bước 4: Quý đối tác nhận và tiến hành giặt ủi cho khách hàng.
+                </li>
+                <li>Bước 5: Quý đối tác cập nhật trạng thái đơn hàng.</li>
+                <li>Bước 6: Khách hàng đến và nhận quần áo.</li>
+              </ol>
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
@@ -82,9 +98,9 @@ export default function Content() {
             <DropdownMenuLabel>Trả lời</DropdownMenuLabel>
             <DropdownMenuSeparator />
             <DropdownMenuItem>
-              Quy trình giặt ủi được hoạt động bằng cách bạn đặt đơn qua ứng
-              dụng và lựa chọn tiệm gần nhất để xử lý đơn hàng. Đội ngũ sẽ đến
-              lấy đồ và giao trả đúng giờ.
+              Với việc hứa hẹn sẽ nâng cao và thúc đẩy quy trình, Wash&Wow mang
+              đến cho quý khách hàng thời gian nhận quần áo trong vòng 4 tiếng
+              kể từ khi gửi đồ
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
@@ -106,9 +122,8 @@ export default function Content() {
             <DropdownMenuLabel>Trả lời</DropdownMenuLabel>
             <DropdownMenuSeparator />
             <DropdownMenuItem>
-              Quy trình giặt ủi được hoạt động bằng cách bạn đặt đơn qua ứng
-              dụng và lựa chọn tiệm gần nhất để xử lý đơn hàng. Đội ngũ sẽ đến
-              lấy đồ và giao trả đúng giờ.
+              Hiện tại Wash&Wow cho phép khách hàng có thể thanh toán qua các
+              cổng thanh toán điện tử như: E-banking, Momo, Zalopay
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
