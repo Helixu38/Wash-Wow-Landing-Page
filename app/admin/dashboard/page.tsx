@@ -1,6 +1,4 @@
-import Dashboard from "@/components/admin/dashboard/page";
-
 const DashboardPage = async () => {
-  return <Dashboard></Dashboard>;
+  return <div>This is the dashboard</div>;
 };
 export default DashboardPage;

@@ -2,7 +2,7 @@
 import axios from "axios";
 import https from "https"; // Import https module
 
-const baseUrl = "https://localhost:7276"; // Replace with your actual API base URL
+const baseUrl = "https://localhost:7276";
 
 interface LoginResponse {
   token: string;
@@ -17,7 +17,7 @@ export const login = async (
   try {
     // Create an HTTPS agent
     const agent = new https.Agent({
-      rejectUnauthorized: false, // This is necessary if you're allowing self-signed certificates
+      rejectUnauthorized: false,
     });
 
     const response = await axios.post<LoginResponse>(
@@ -40,9 +40,9 @@ export const login = async (
       const { token, role, username } = response.data;
 
       if (token && role) {
-        // Store the token securely (for example, in local storage or a cookie)
         localStorage.setItem("token", token);
         localStorage.setItem("fullName", username);
+        localStorage.setItem("role", role);
         console.log("Login successful, token:", token, "fullName:", username);
         return role;
       } else {

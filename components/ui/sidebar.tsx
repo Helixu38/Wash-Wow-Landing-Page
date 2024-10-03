@@ -174,7 +174,7 @@ export const SidebarLink = ({
 
   // Determine if this link is the current path
   const isActive =
-    link.href === "/dashboard"
+    link.href === "/admin/dashboard"
       ? pathname === link.href
       : pathname.startsWith(link.href);
 
@@ -184,7 +184,7 @@ export const SidebarLink = ({
       className={cn(
         "group/sidebar flex items-center justify-start gap-2 py-2",
         className,
-        isActive ? "text-orange-500" : "text-neutral-700 dark:text-neutral-200", // Apply orange color if active
+        isActive ? "text-primary" : "text-neutral-700 dark:text-neutral-200", // Apply orange color if active
       )}
       {...props}
     >
