@@ -97,6 +97,7 @@ export const DesktopSidebar = ({
         }}
         onMouseEnter={() => setOpen(true)}
         onMouseLeave={() => setOpen(false)}
+        style={{ overflowY: "auto", scrollbarWidth: "none" }}
         {...props}
       >
         {children}
@@ -158,6 +159,7 @@ export const MobileSidebar = ({
 export const SidebarLink = ({
   link,
   className,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   handleSetPath,
   ...props
 }: {
@@ -169,8 +171,6 @@ export const SidebarLink = ({
 }) => {
   const { open, animate } = useSidebar();
   const pathname = usePathname();
-
-  return null;
 
   // Determine if this link is the current path
   const isActive =
