@@ -229,7 +229,7 @@ export function LaundryShopTable() {
       try {
         const shops = await fetchLaundryShops(pageNo, pageSize);
         setLaundryShops(shops);
-      } catch (error) {
+      } catch {
         setError("Failed to fetch laundry shops");
       } finally {
         setLoading(false);
