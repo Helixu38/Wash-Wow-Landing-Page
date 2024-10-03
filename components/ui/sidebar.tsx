@@ -178,18 +178,22 @@ export const SidebarLink = ({
       ? pathname === link.href
       : pathname.startsWith(link.href);
 
+  // Ensure the Logout link is never active if on admin routes
+  const isLogoutActive = link.href === "/" && pathname.startsWith("/admin");
+
   return (
     <Link
       href={link.href}
       className={cn(
         "group/sidebar flex items-center justify-start gap-2 py-2",
         className,
-        isActive ? "text-primary" : "text-neutral-700 dark:text-neutral-200", // Apply orange color if active
+        isActive && !isLogoutActive
+          ? "text-primary"
+          : "text-neutral-700 dark:text-neutral-200", // Apply primary color if active and not a logout route
       )}
       {...props}
     >
       {link.icon}
-
       <motion.span
         animate={{
           display: animate ? (open ? "inline-block" : "none") : "inline-block",

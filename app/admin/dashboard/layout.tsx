@@ -100,7 +100,7 @@ const links: NavLink[] = [
   },
   {
     label: "Logout",
-    href: "/logout",
+    href: "/",
     icon: <IconArrowLeft className="h-5 w-5 flex-shrink-0" />,
   },
 ];
