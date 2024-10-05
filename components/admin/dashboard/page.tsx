@@ -25,8 +25,7 @@ export default function Dashboard() {
     loadForms();
   }, []);
 
-  const handleApprove = async (formID: string) => {
-    const userID = "ab5f9c9ef6c2410cadd126e027caef06"; // Hard-coded user ID
+  const handleApprove = async (formID: string, userID: string) => {
     const result = await updateFormStatus(formID, "APPROVED");
     if (result) {
       console.log("Form approved:", result);
@@ -42,8 +41,7 @@ export default function Dashboard() {
     }
   };
 
-  const handleReject = async (formID: string) => {
-    const userID = "ab5f9c9ef6c2410cadd126e027caef06"; // Hard-coded user ID
+  const handleReject = async (formID: string, userID: string) => {
     const result = await updateFormStatus(formID, "REJECTED");
     if (result) {
       console.log("Form rejected:", result);
@@ -104,13 +102,13 @@ export default function Dashboard() {
             <div className="flex w-full max-w-sm gap-10">
               <Button
                 className="bg-primary font-medium text-white text-xl"
-                onClick={() => handleApprove(form.id)} // Call handleApprove with the form ID
+                onClick={() => handleApprove(form.id, form.senderID)} // Call handleApprove with the form ID
               >
                 Approve
               </Button>
               <Button
                 className="bg-red-500 font-medium text-white text-xl"
-                onClick={() => handleReject(form.id)}
+                onClick={() => handleReject(form.id, form.senderID)}
               >
                 Reject
               </Button>

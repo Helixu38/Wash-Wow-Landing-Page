@@ -15,6 +15,7 @@ export interface FormImage {
 export interface Form {
   id: string;
   status: string;
+  senderID: string;
   formTemplateID: number;
   title: string;
   fieldValues: FormFieldValue[];
