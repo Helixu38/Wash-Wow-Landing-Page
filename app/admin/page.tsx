@@ -1,10 +1,10 @@
-import LoginForm from "@/components/admin/login/page";
+import dynamic from "next/dynamic";
 import React from "react";
 
-export default function page() {
-  return (
-    <>
-      <LoginForm></LoginForm>
-    </>
-  );
+const LoginForm = dynamic(() => import("@/components/admin/login/page"), {
+  ssr: false,
+});
+
+export default function LoginPage() {
+  return <LoginForm />;
 }

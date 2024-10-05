@@ -13,13 +13,13 @@ export default function Navbar() {
       </div>
 
       <div className="flex flex-row items-center gap-4 md:gap-[68px]">
-        <Link href={"/download"}>
+        <Link href={"/landing_page/download"}>
           <p className="hidden md:block">Tải app ngay</p>
         </Link>
-        <Link href={"/about-us"}>
+        <Link href={"/landing_page/about-us"}>
           <p className="hidden md:block">Về chúng tôi</p>
         </Link>
-        <Link href={"/question"}>
+        <Link href={"/landing_page/question"}>
           <div className="flex items-center justify-center w-10 h-10 rounded-full bg-primary">
             <IconQuestionMark color="white" size={20} />
           </div>

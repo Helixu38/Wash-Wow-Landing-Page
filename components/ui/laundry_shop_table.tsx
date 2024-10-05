@@ -38,74 +38,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-
-export type LaundryShop = {
-  id: string;
-  name: string;
-  address: string;
-  phoneContact: string;
-  status: "open" | "closed" | "pending";
-  totalMachines: number;
-};
-
-// Replace this with your actual data fetching logic
-const fetchLaundryShops = async (
-  pageNo: number,
-  pageSize: number,
-): Promise<LaundryShop[]> => {
-  // Sample data to simulate an API response
-  const data: LaundryShop[] = [
-    {
-      id: "1",
-      name: "Clean & Fresh",
-      address: "123 Main St",
-      phoneContact: "555-1234",
-      status: "open",
-      totalMachines: 10,
-    },
-    {
-      id: "2",
-      name: "Laundry Hub",
-      address: "456 Elm St",
-      phoneContact: "555-5678",
-      status: "closed",
-      totalMachines: 8,
-    },
-    {
-      id: "3",
-      name: "Laundry Express",
-      address: "789 Maple Ave",
-      phoneContact: "555-9876",
-      status: "open",
-      totalMachines: 6,
-    },
-    {
-      id: "4",
-      name: "Laundry World",
-      address: "321 Oak St",
-      phoneContact: "555-1357",
-      status: "pending",
-      totalMachines: 5,
-    },
-    {
-      id: "5",
-      name: "Wash & Go",
-      address: "654 Pine St",
-      phoneContact: "555-2468",
-      status: "open",
-      totalMachines: 7,
-    },
-    {
-      id: "6",
-      name: "Eco Wash",
-      address: "111 Cedar St",
-      phoneContact: "555-8642",
-      status: "closed",
-      totalMachines: 4,
-    },
-  ];
-  return data.slice((pageNo - 1) * pageSize, pageNo * pageSize); // Simulate pagination
-};
+import { fetchLaundryShops, LaundryShop } from "@/lib/services/fetch";
 
 export const columns: ColumnDef<LaundryShop>[] = [
   {

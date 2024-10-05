@@ -84,7 +84,7 @@ export const fetchLaundryShops = async (
 ): Promise<LaundryShop[]> => {
   try {
     const response = await axios.get<{ value: LaundryShop[] }>(
-      `${baseUrl}?pageNo=${pageNo}&pageSize=${pageSize}`,
+      `${baseUrl}/LaundryShop?PageNo=${pageNo}&PageSize=${pageSize}`,
     );
     return response.data.value; // Extracting the array of LaundryShop
   } catch (error) {

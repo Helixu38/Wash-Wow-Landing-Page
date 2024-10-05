@@ -5,11 +5,13 @@ import { Button } from "@/components/ui/button";
 import { updateFormStatus } from "@/lib/services/form";
 import { updateUserRole } from "@/lib/services/form"; // Import the updateUserRole function
 import Image from "next/image";
+import { useToast } from "@/hooks/use-toast";
 
 export default function Dashboard() {
   const [forms, setForms] = useState<Form[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string>("");
+  const { toast } = useToast();
 
   const loadForms = async () => {
     const response = await fetchForm();
@@ -31,8 +33,18 @@ export default function Dashboard() {
       console.log("Form approved:", result);
       const roleUpdateResult = await updateUserRole(userID, "SHOP_OWNER"); // Change the role to SHOP_OWNER
       if (roleUpdateResult) {
+        toast({
+          variant: "successful",
+          title: "User: Role Change",
+          description: "User role updated to shop owner",
+        });
         console.log("User role updated to SHOP_OWNER:", roleUpdateResult);
       } else {
+        toast({
+          variant: "destructive",
+          title: "User: Role Change",
+          description: "Failed to update user role.",
+        });
         setError("Failed to update user role.");
       }
       await loadForms(); // Refetch forms after update
@@ -47,8 +59,18 @@ export default function Dashboard() {
       console.log("Form rejected:", result);
       const roleUpdateResult = await updateUserRole(userID, "CUSTOMER"); // Change the role to CUSTOMER
       if (roleUpdateResult) {
+        toast({
+          variant: "successful",
+          title: "User: Role Change",
+          description: "User role updated to customer.",
+        });
         console.log("User role updated to CUSTOMER:", roleUpdateResult);
       } else {
+        toast({
+          variant: "destructive",
+          title: "User: Role Change",
+          description: "Failed to update user role.",
+        });
         setError("Failed to update user role.");
       }
       await loadForms(); // Refetch forms after update

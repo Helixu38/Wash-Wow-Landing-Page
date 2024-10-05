@@ -1,14 +1,13 @@
 import AdminNavbar from "@/components/navigation/adminnavbar";
 import localFont from "next/font/local";
 
-const defaultUrl = process.env.VERCEL_URL
-  ? `https://${process.env.VERCEL_URL}`
-  : "https://localhost:3000";
+const defaultUrl = `https://www.washnwow.store/admin`;
 
 export const metadata = {
   metadataBase: new URL(defaultUrl),
-  title: "HoverSprite",
-  description: "The all-in-one management solution for spraying at scale.",
+  title: "Wash Wow",
+  description:
+    "Transform your laundry day with Wash-Wow, the ultimate laundry service app!.",
 };
 
 const lato = localFont({
@@ -23,11 +22,7 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
-      lang="en"
-      className={`${lato.variable} antialiased`}
-      suppressHydrationWarning
-    >
+    <html lang="en" className={`${lato.variable} antialiased`}>
       <head>
         <title>Wash&Wow</title>
         <link rel="icon" href="/favicon.ico" sizes="any" />
