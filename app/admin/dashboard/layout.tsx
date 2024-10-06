@@ -18,6 +18,7 @@ import {
   IconSettings,
   IconUsers,
 } from "@tabler/icons-react";
+import { Toaster } from "@/components/ui/toaster";
 
 export default function Layout({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<{ fullName: string; role: string } | null>(
@@ -57,6 +58,7 @@ export default function Layout({ children }: { children: ReactNode }) {
       </Sidebar>
       <div className="flex h-[calc(100vh-4rem)] w-full flex-1 flex-col gap-2 overflow-y-auto rounded-tl-2xl border border-neutral-200 bg-white p-2 dark:border-neutral-700 dark:bg-neutral-900 md:p-10">
         {children}
+        <Toaster />
       </div>
     </div>
   );
