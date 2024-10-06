@@ -11,7 +11,7 @@ const lato = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Wash Wow",
+  title: "Wash&Wow",
   description:
     "Transform your laundry day with Wash-Wow, the ultimate laundry service app!",
 };

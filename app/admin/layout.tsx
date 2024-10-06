@@ -5,7 +5,7 @@ const defaultUrl = `https://www.washnwow.store/admin`;
 
 export const metadata = {
   metadataBase: new URL(defaultUrl),
-  title: "Wash Wow",
+  title: "Wash&Wow",
   description:
     "Transform your laundry day with Wash-Wow, the ultimate laundry service app!.",
 };
