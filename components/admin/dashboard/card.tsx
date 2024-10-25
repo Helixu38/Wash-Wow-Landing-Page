@@ -1,58 +1,55 @@
 import * as React from "react";
-
-import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+// Import icons from a library, or use emojis
+import { IconArrowNarrowDown, IconArrowNarrowUp } from "@tabler/icons-react";
 
-export function CardWithForm() {
+interface AdminCardProps {
+  title: string;
+  numberStat: string;
+  growthStat: string;
+  growthBool: boolean; // true for up, false for down
+}
+
+export function AdminCard({
+  title,
+  numberStat,
+  growthStat,
+  growthBool,
+}: AdminCardProps) {
   return (
     <Card className="w-[350px]">
       <CardHeader>
-        <CardTitle>Create project</CardTitle>
-        <CardDescription>Deploy your new project in one-click.</CardDescription>
+        <CardTitle className="text-black font-normal text-xl">
+          {title}
+        </CardTitle>
       </CardHeader>
-      <CardContent>
-        <form>
-          <div className="grid w-full items-center gap-4">
-            <div className="flex flex-col space-y-1.5">
-              <Label htmlFor="name">Name</Label>
-              <Input id="name" placeholder="Name of your project" />
-            </div>
-            <div className="flex flex-col space-y-1.5">
-              <Label htmlFor="framework">Framework</Label>
-              <Select>
-                <SelectTrigger id="framework">
-                  <SelectValue placeholder="Select" />
-                </SelectTrigger>
-                <SelectContent position="popper">
-                  <SelectItem value="next">Next.js</SelectItem>
-                  <SelectItem value="sveltekit">SvelteKit</SelectItem>
-                  <SelectItem value="astro">Astro</SelectItem>
-                  <SelectItem value="nuxt">Nuxt.js</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-          </div>
-        </form>
+      <CardContent className="text-[#045AD0] font-extrabold text-5xl">
+        {numberStat}
       </CardContent>
-      <CardFooter className="flex justify-between">
-        <Button variant="outline">Cancel</Button>
-        <Button>Deploy</Button>
+      <CardFooter className="flex items-center gap-2 text-gray-600">
+        {growthBool ? (
+          <div className="flex items-center text-green-500">
+            <IconArrowNarrowUp />
+            <p>
+              {growthStat}{" "}
+              <span className="text-gray-400">from last month</span>
+            </p>
+          </div>
+        ) : (
+          <div className="flex items-center text-red-500">
+            <IconArrowNarrowDown />
+            <p>
+              {growthStat}{" "}
+              <span className="text-gray-400">from last month</span>
+            </p>
+          </div>
+        )}
       </CardFooter>
     </Card>
   );
