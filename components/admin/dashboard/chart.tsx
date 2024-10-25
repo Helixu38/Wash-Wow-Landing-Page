@@ -15,31 +15,35 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
-export const description = "A multiple bar chart";
+
+export const description = "A multiple bar chart showing monthly revenue data";
+
 const chartData = [
-  { month: "January", desktop: 186, mobile: 80 },
-  { month: "February", desktop: 305, mobile: 200 },
-  { month: "March", desktop: 237, mobile: 120 },
-  { month: "April", desktop: 73, mobile: 190 },
-  { month: "May", desktop: 209, mobile: 130 },
-  { month: "June", desktop: 214, mobile: 140 },
+  { month: "January", revenue: 50, estimatedRevenue: 55 },
+  { month: "February", revenue: 60, estimatedRevenue: 65 },
+  { month: "March", revenue: 58, estimatedRevenue: 62 },
+  { month: "April", revenue: 64, estimatedRevenue: 70 },
+  { month: "May", revenue: 70, estimatedRevenue: 75 },
+  { month: "June", revenue: 65, estimatedRevenue: 68 },
 ];
+
 const chartConfig = {
-  desktop: {
-    label: "Desktop",
-    color: "hsl(var(--chart-1))",
+  revenue: {
+    label: "Revenue",
+    color: "#045AD0", // Primary blue color for Revenue
   },
-  mobile: {
-    label: "Mobile",
-    color: "hsl(var(--chart-2))",
+  estimatedRevenue: {
+    label: "Estimated Revenue",
+    color: "#A5CBFF", // Light blue color for Estimated Revenue
   },
 } satisfies ChartConfig;
-export function Component() {
+
+export function AdminChart() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Bar Chart - Multiple</CardTitle>
-        <CardDescription>January - June 2024</CardDescription>
+        <CardTitle>Monthly Revenue 2024</CardTitle>
+        <CardDescription>Amount in million VND</CardDescription>
       </CardHeader>
       <CardContent>
         <ChartContainer config={chartConfig}>
@@ -56,8 +60,10 @@ export function Component() {
               cursor={false}
               content={<ChartTooltipContent indicator="dashed" />}
             />
-            <Bar dataKey="desktop" fill="var(--color-desktop)" radius={4} />
-            <Bar dataKey="mobile" fill="var(--color-mobile)" radius={4} />
+            <Bar dataKey="revenue" fill="#045AD0" radius={4} />{" "}
+            {/* Primary blue for revenue */}
+            <Bar dataKey="estimatedRevenue" fill="#A5CBFF" radius={4} />{" "}
+            {/* Light blue for estimated revenue */}
           </BarChart>
         </ChartContainer>
       </CardContent>
@@ -66,7 +72,7 @@ export function Component() {
           Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
         </div>
         <div className="leading-none text-muted-foreground">
-          Showing total visitors for the last 6 months
+          Showing total revenue and estimated revenue for the last 6 months
         </div>
       </CardFooter>
     </Card>
