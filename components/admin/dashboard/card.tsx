@@ -6,7 +6,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-// Import icons from a library, or use emojis
 import { IconArrowNarrowDown, IconArrowNarrowUp } from "@tabler/icons-react";
 
 interface AdminCardProps {

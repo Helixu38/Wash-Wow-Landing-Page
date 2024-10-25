@@ -1,5 +1,5 @@
 "use client";
-import { TrendingUp } from "lucide-react";
+import { IconTrendingUp } from "@tabler/icons-react";
 import { Bar, BarChart, CartesianGrid, XAxis } from "recharts";
 import {
   Card,
@@ -69,7 +69,8 @@ export function AdminChart() {
       </CardContent>
       <CardFooter className="flex-col items-start gap-2 text-sm">
         <div className="flex gap-2 font-medium leading-none">
-          Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
+          Trending up by<span className="text-green-500">5.2%</span> this month{" "}
+          <IconTrendingUp className="h-4 w-4 text-green-500" />
         </div>
         <div className="leading-none text-muted-foreground">
           Showing total revenue and estimated revenue for the last 6 months
