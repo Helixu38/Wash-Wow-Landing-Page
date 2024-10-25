@@ -4,8 +4,8 @@ import { AdminChart } from "./chart";
 
 function AdminDashboard() {
   return (
-    <div className="flex flex-row gap-[25px]">
-      <div className="grid grid-cols-2 gap-[25px] columns-2">
+    <div className="flex flex-col lg:flex-row gap-[25px]">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-[25px] flex-grow-0">
         <AdminCard
           title="Users"
           numberStat="1,568"
@@ -31,7 +31,7 @@ function AdminDashboard() {
           growthBool={true}
         />
       </div>
-      <div className="flex-grow h-full">
+      <div className="flex-grow h-full lg:w-1/2 w-full mt-4 lg:mt-0">
         <AdminChart />
       </div>
     </div>
