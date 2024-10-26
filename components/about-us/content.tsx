@@ -51,15 +51,15 @@ export default function Content() {
           sẽ sẵn sàng để nhận.
         </p>
       </div>
-      <Image
-        className="w-full mb-8 md:mb-10 lg:mb-[61px]"
-        src="/img/about us/Group 7.png"
-        alt="Hero Image"
-        width={0}
-        height={0}
-        style={{ width: "100%", height: "auto" }}
-        unoptimized={true}
-      />
+      <div className="w-full overflow-hidden mb-8 md:mb-10 lg:mb-[61px]">
+        <Image
+          src="/img/about us/Group 7.png"
+          alt="Hero Image"
+          width={1920}
+          height={1080}
+          unoptimized={true}
+        />
+      </div>
     </>
   );
 }
