@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Link from "next/link";
 import { AppLogo } from "../ui/applogo";
@@ -12,12 +13,12 @@ export default function Navbar() {
         </Link>
       </div>
 
-      <div className="flex flex-row items-center gap-4 md:gap-[68px]">
+      <div className="flex flex-row items-center gap-4 md:gap-[68px] font-medium small-mobile:text-lg">
         <Link href={"/landing_page/download"}>
-          <p className="hidden md:block">Tải app ngay</p>
+          <p className="md:block">Tải app ngay</p>
         </Link>
         <Link href={"/landing_page/about-us"}>
-          <p className="hidden md:block">Về chúng tôi</p>
+          <p className=" md:block">Về chúng tôi</p>
         </Link>
         <Link href={"/landing_page/question"}>
           <div className="flex items-center justify-center w-10 h-10 rounded-full bg-primary">

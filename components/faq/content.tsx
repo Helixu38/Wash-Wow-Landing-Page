@@ -13,18 +13,19 @@ import { IconChevronDown } from "@tabler/icons-react";
 export default function Content() {
   return (
     <>
-      <div className="w-full my-[63px] text-center text-primary font-bold text-6xl">
+      <div className="w-full my-[63px] text-center text-primary font-bold text-4xl md:text-6xl">
         <h1>Câu hỏi thường gặp</h1>
       </div>
       <div className="w-full text-center justify-center content-center text-3xl font-bold text-primary">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <ul className="flex flex-row justify-center items-center cursor-pointer w-[800px] mx-auto mb-[35px]">
+            <ul className="flex flex-row justify-center items-center cursor-pointer md:w-[800px] mx-auto mb-[35px]">
               <div className="border-primary border-3 rounded-full flex justify-center items-center">
                 <IconQuestionMark className="text-primary flex-shrink-0" />
               </div>
               <span className="ml-[28.5px] flex-grow text-left">
-                Quy trình giặt ủi đặt qua ứng dụng được hoạt động như thế nào?
+                Quy trình giặt ủi đặt qua ứng dụng <br /> được hoạt động như thế
+                nào?
               </span>
               <IconChevronDown className="text-primary flex-shrink-0" />
             </ul>
@@ -49,7 +50,7 @@ export default function Content() {
 
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <ul className="flex flex-row justify-center items-center cursor-pointer w-[800px] mx-auto mb-[35px]">
+            <ul className="flex flex-row justify-center items-center cursor-pointer md:w-[800px] mx-auto mb-[35px]">
               <div className="border-primary border-3 rounded-full flex justify-center items-center">
                 <IconQuestionMark className="text-primary" />
               </div>
@@ -83,7 +84,7 @@ export default function Content() {
 
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <ul className="flex flex-row justify-center items-center cursor-pointer w-[800px] mx-auto mb-[35px]">
+            <ul className="flex flex-row justify-center items-center cursor-pointer md:w-[800px] mx-auto mb-[35px]">
               <div className="border-primary border-3 rounded-full flex justify-center items-center">
                 <IconQuestionMark className="text-primary" />
               </div>
@@ -107,7 +108,7 @@ export default function Content() {
 
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <ul className="flex flex-row justify-center items-center cursor-pointer w-[800px] mx-auto mb-[63px]">
+            <ul className="flex flex-row justify-center items-center cursor-pointer md:w-[800px] mx-auto mb-[63px]">
               <div className="border-primary border-3 rounded-full flex justify-center items-center">
                 <IconQuestionMark className="text-primary" />
               </div>

@@ -17,7 +17,7 @@ export default function Content() {
         </h1>
       </div>
 
-      <div className="relative mt-6 sm:mt-10 lg:mt-12 w-full h-[400px] sm:h-[400px] lg:h-[600px] xl:h-[838px]">
+      <div className="relative mt-6 sm:mt-10 lg:mt-12 w-full h-[400px] sm:h-[400px] lg:h-[600px] xl:h-[838px] mb-[172px]">
         <Image
           src="/img/download/download.png"
           alt="Background"
@@ -29,7 +29,7 @@ export default function Content() {
         <div className="absolute inset-0 bg-gradient-to-t from-[#045AD0] to-transparent opacity-30 z-1"></div>
 
         <div className="absolute inset-0 flex items-center justify-center sm:justify-start px-4 sm:px-8 lg:px-16 xl:px-[101px] max-w-7xl mx-auto left-0 right-0">
-          <Button className="min-[320px]:px-4 max-[425px]:px-4 min-[320px]:w-auto max-[425px]:w-auto px-3 py-2 sm:px-4 lg:px-6 bg-white text-primary font-bold rounded-3xl shadow-lg hover:bg-gray-100 w-full sm:w-auto h-[40px] sm:h-[46px] lg:h-[60px] xl:h-[90px] flex items-center justify-center sm:justify-start min-[320px]:mr-[200px] max-[425px]:mr-[200px]  z-10">
+          <Button className="px-3 py-2 sm:px-4 lg:px-6 bg-white text-primary font-bold rounded-3xl shadow-lg hover:bg-gray-100 small-mobile:mr-[160px] sm:w-auto h-[40px] sm:h-[46px] lg:h-[60px] xl:h-[90px] flex items-center justify-center small-mobile:justify-start sm:justify-start z-10">
             <IconDownload className="relative w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8" />
             <p className="text-base sm:text-lg lg:text-2xl xl:text-3xl font-bold ml-2 sm:ml-3 lg:ml-4">
               Tải về ngay{" "}
@@ -42,7 +42,7 @@ export default function Content() {
 
         <div className="absolute inset-0 flex justify-center items-center">
           <Image
-            className="z-10 w-[150px] sm:w-[180px] lg:w-[300px] xl:w-[345px] h-auto min-[320px]:ml-[150px] max-[425px]:ml-[150px]"
+            className="small-mobile:ml-[180px] z-10 w-[150px] sm:w-[180px] lg:w-[300px] xl:w-[345px] h-auto min-[320px]:ml-[150px] max-[425px]:ml-[150px]"
             src="/img/hero/1.png"
             alt="Hero Image"
             width={345}
