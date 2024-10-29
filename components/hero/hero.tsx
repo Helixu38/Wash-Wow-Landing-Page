@@ -41,18 +41,18 @@ export default function Hero() {
         </p>
 
         {/* Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 pt-4 lg:pt-6">
+        <div className="flex flex-row sm:flex-row gap-4 pt-4 lg:pt-6">
           <Link href={"/landing_page/download"}>
             <Button
               variant="outline"
-              className="w-full sm:w-[180px] h-[40px] bg-transparent border-primary hover:text-primary border-2 font-bold text-sm lg:text-base text-white flex items-center justify-center"
+              className="w-full sm:w-[180px] h-[40px] bg-transparent border-primary hover:text-primary border-2 small-mobile:font-medium font-bold text-sm lg:text-base text-white flex items-center justify-center"
             >
               <span>Trở thành đối tác</span>
             </Button>
           </Link>
 
           <Link href={"/landing_page/download"}>
-            <Button className="w-full sm:w-[180px] h-[40px] text-sm lg:text-base font-bold bg-primary hover:bg-blue-800 flex items-center justify-center space-x-2">
+            <Button className="w-full sm:w-[180px] h-[40px] text-sm lg:text-base font-bold bg-primary hover:bg-blue-800 small-mobile:font-medium flex items-center justify-center space-x-2">
               <IconDownload className="relative" color="white" size={16} />
               <span>Tải app ngay</span>
             </Button>

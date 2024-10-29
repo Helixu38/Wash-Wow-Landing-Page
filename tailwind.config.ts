@@ -29,7 +29,7 @@ const config: Config = {
         "8": "8px",
       },
       screens: {
-        "small-mobile": { min: "320px", max: "426px" },
+        "small-mobile": { min: "320px", max: "526px" },
       },
     },
   },
