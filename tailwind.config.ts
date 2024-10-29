@@ -28,6 +28,9 @@ const config: Config = {
         "6": "6px",
         "8": "8px",
       },
+      screens: {
+        "small-mobile": { min: "320px", max: "426px" },
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
