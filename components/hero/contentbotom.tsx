@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
 
 export default function ContentBottom() {
   return (
@@ -33,25 +34,40 @@ export default function ContentBottom() {
         </div>
 
         {/* Section 4 */}
-        <div className="flex flex-row  max-w-4xl mx-auto space-x-4 p-4">
-          <Image
-            src="/img/hero/2.png"
-            alt="Hero Image"
-            width={134.4}
-            height={266}
-            unoptimized={true}
-            className="object-cover w-[134.4px] h-[266px] sm:w-[200px] sm:h-[400px] md:w-[345px] md:h-[690px]"
-          />
-          <div className="flex flex-col space-y-2 text-right max-w-xs sm:max-w-full justify-end">
-            <h2 className="text-lg font-bold sm:text-2xl">
-              Linh hoạt thời gian, <br /> nhận hàng bất kỳ lúc nào.
+        <div className="flex flex-col">
+          <div className="flex flex-row small-mobile:justify-center">
+            <Image
+              src="/img/hero/4.png"
+              alt="Hero Image"
+              width={134.4}
+              height={266}
+              unoptimized={true}
+              className="object-cover w-[134.4px] h-[266px] sm:w-[200px] sm:h-[400px] md:w-[345px] md:h-[690px]"
+            />
+            <Image
+              src="/img/hero/5.png"
+              alt="Hero Image"
+              width={134.4}
+              height={266}
+              unoptimized={true}
+              className="object-cover w-[134.4px] h-[266px] sm:w-[200px] sm:h-[400px] md:w-[345px] md:h-[690px]"
+            />
+          </div>
+          <div className="flex flex-col small-mobile:text-center">
+            <h2 className="font-bold small-mobile:text-lg">
+              Theo dõi tình trạng và đơn hàng tiện lợi
             </h2>
-            <p className="text-sm font-medium sm:text-base">
-              Wash&Wow cho phép người dùng đặt lịch giặt ủi theo thời gian linh
-              hoạt, dễ dàng chọn giờ giao nhận phù hợp. Bạn có thể nhận đồ giặt
-              sạch vào bất kỳ lúc nào thuận tiện, mang lại sự tiện lợi tối đa.
+            <p className="font-medium small-mobile:text-base my-[21px]">
+              Wash&Wow cung cấp cho đối tác công cụ theo dõi tình trạng và quản
+              lý đơn hàng một cách tiện lợi. Đối tác có thể dễ dàng cập nhật
+              trạng thái giặt sấy, quản lý các đơn hàng và phục vụ khách hàng
+              hiệu quả, giúp tối ưu hóa quy trình làm việc và tăng cường chất
+              lượng dịch vụ.
             </p>
           </div>
+          <Button className="bg-primary small-mobile:mx-[60px] h-[45px] rounded-xl">
+            Đăng ký ngay
+          </Button>
         </div>
       </div>
     </div>
