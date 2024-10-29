@@ -34,12 +34,12 @@ export default function ContentBottom() {
         </div>
 
         {/* Section 4 */}
-        <div className="flex flex-row items-start max-w-4xl mx-auto space-x-4 p-4 mb-[234px]">
-          <div className="flex flex-col small-mobile:space-y-3 text-left sm:mt-[54px] md:mt-[174px]">
-            <p className="text-base font-bold sm:text-lg sm:mb-[37px] md:text-3xl">
+        <div className="flex flex-row items-start max-w-4xl mx-auto space-x-4 p-4 small-mobile:mb-[61px] md:mb-[234px]">
+          <div className="flex flex-col text-left sm:mt-[54px] md:mt-[174px]">
+            <p className="text-base font-bold sm:text-lg sm:mb-[37px] md:text-3xl small-mobile:mb-[21px]">
               Theo dõi tình trạng <br /> và đơn hàng tiện lợi
             </p>
-            <p className="text-sm font-medium sm:text-base md:pr-[62px]">
+            <p className="text-sm font-medium sm:text-base md:pr-[62px] small-mobile:mb-[24px]">
               Wash&Wow cung cấp cho đối tác công cụ theo dõi tình trạng và quản
               lý đơn hàng một cách tiện lợi. Đối tác có thể dễ dàng cập nhật
               trạng thái giặt sấy, quản lý các đơn hàng và phục vụ khách hàng
