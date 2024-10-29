@@ -11,7 +11,7 @@ export default function Home() {
       <Navbar></Navbar>
       <Hero></Hero>
       <Content></Content>
-      {/* <ContentBottom></ContentBottom> */}
+      <ContentBottom></ContentBottom>
       <Footer></Footer>
     </>
   );
