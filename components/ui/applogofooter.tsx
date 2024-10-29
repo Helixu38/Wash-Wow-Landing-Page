@@ -12,6 +12,7 @@ const AppLogoFooter = ({ ...props }) => (
       height={60.99}
       alt="Picture of the author"
       unoptimized={true}
+      className="small-mobile:w-[206px] small-mobile:h-[34px]"
     />
   </div>
 );
