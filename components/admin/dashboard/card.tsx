@@ -8,12 +8,7 @@ interface AdminCardProps {
   extraStat?: string; // Optional extra stat
 }
 
-export function AdminCard({
-  title,
-  numberStat,
-  extraTitle,
-  extraStat,
-}: AdminCardProps) {
+export function AdminCard({ title, numberStat }: AdminCardProps) {
   return (
     <Card className="w-[350px]">
       <CardHeader>
