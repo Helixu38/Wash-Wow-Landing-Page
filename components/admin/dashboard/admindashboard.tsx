@@ -7,6 +7,10 @@ import {
   FetchStatisticSystemResponse,
 } from "@/lib/services/fetch";
 
+// Helper function for formatting numbers with commas
+const formatNumber = (number: number): string =>
+  new Intl.NumberFormat().format(number);
+
 function AdminDashboard() {
   const [stats, setStats] = useState<FetchStatisticSystemResponse | null>(null);
 
@@ -24,19 +28,19 @@ function AdminDashboard() {
         <AdminCard
           title="Customers"
           numberStat={
-            stats ? stats.value.totalCustomers.toString() : "Loading..."
+            stats ? formatNumber(stats.value.totalCustomers) : "Loading..."
           }
         />
         <AdminCard
           title="Business Owners"
           numberStat={
-            stats ? stats.value.totalShopOwners.toString() : "Loading..."
+            stats ? formatNumber(stats.value.totalShopOwners) : "Loading..."
           }
         />
         <AdminCard
           title="Total Revenue"
           numberStat={
-            stats ? stats.value.totalRevenue.toString() : "Loading..."
+            stats ? `${formatNumber(stats.value.totalRevenue)}` : "Loading..."
           }
         />
         <AdminCard
@@ -47,12 +51,14 @@ function AdminDashboard() {
         />
         <AdminCard
           title="Actual Revenue"
-          numberStat={stats ? stats.value.realRevenue.toString() : "Loading..."}
+          numberStat={
+            stats ? `${formatNumber(stats.value.realRevenue)}` : "Loading..."
+          }
         />
         <AdminCard
           title="Total Transactions"
           numberStat={
-            stats ? stats.value.totalTransactions.toString() : "Loading..."
+            stats ? formatNumber(stats.value.totalTransactions) : "Loading..."
           }
         />
       </div>
