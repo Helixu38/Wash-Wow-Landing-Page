@@ -60,7 +60,7 @@ export interface LaundryShop {
   ownerID: string;
 }
 
-interface OperatingHours {
+export interface OperatingHours {
   ticks: number;
   days: number;
   hours: number;
@@ -83,12 +83,54 @@ export const fetchLaundryShops = async (
   pageSize: number,
 ): Promise<LaundryShop[]> => {
   try {
-    const response = await axios.get<{ value: LaundryShop[] }>(
-      `${baseUrl}/LaundryShop?PageNo=${pageNo}&PageSize=${pageSize}`,
-    );
-    return response.data.value; // Extracting the array of LaundryShop
+    const response = await axios.get<{
+      value: { data: LaundryShop[] };
+    }>(`${baseUrl}/LaundryShop?PageNo=${pageNo}&PageSize=${pageSize}`);
+
+    return response.data.value.data; // Accessing `data` inside `value`
   } catch (error) {
     console.error("Error fetching laundry shops:", error);
     throw error; // Rethrow the error for further handling if needed
   }
 };
+
+export interface FetchStatisticSystemResponse {
+  value: {
+    totalBookings: number;
+    pendingBookings: number;
+    completedBookings: number;
+    totalRevenue: number;
+    commissionRate: number;
+    realRevenue: number;
+    bestSellingService: string;
+    monthlyRevenueGrowth: Array<{
+      month: string;
+      revenue: number;
+      growthPercentage: number;
+    }>;
+    totalCustomers: number;
+    totalShopOwners: number;
+    totalTransactions: number;
+  };
+}
+
+export async function fetchSystemStatistics(): Promise<FetchStatisticSystemResponse | null> {
+  try {
+    const response = await fetch(`${baseUrl}/api/Statistics/system`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error(`Error: ${response.statusText}`);
+    }
+
+    const data: FetchStatisticSystemResponse = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    return null;
+  }
+}
