@@ -40,6 +40,7 @@ export default function Content() {
         <div className="absolute inset-0 flex items-center justify-center sm:justify-start px-4 sm:px-8 lg:px-16 xl:px-[101px] max-w-7xl mx-auto left-0 right-0">
           <Button
             onClick={handleDownload}
+            onTouchStart={handleDownload} // Add this line for mobile touch support
             className="px-3 py-2 sm:px-4 lg:px-6 bg-white text-primary font-bold rounded-3xl shadow-lg hover:bg-gray-100 small-mobile:mr-[160px] sm:w-auto h-[40px] sm:h-[46px] lg:h-[60px] xl:h-[90px] flex items-center justify-center small-mobile:justify-start sm:justify-start z-10"
           >
             <IconDownload className="relative w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8" />
