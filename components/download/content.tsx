@@ -1,9 +1,18 @@
+"use client";
 import React from "react";
 import { Button } from "../ui/button";
 import { IconDownload } from "@tabler/icons-react";
 import Image from "next/image";
 
 export default function Content() {
+  const handleDownload = () => {
+    const fileUrl = "/file/app-debug.apk"; // Replace with your actual file URL
+    const link = document.createElement("a");
+    link.href = fileUrl;
+    link.download = "WashAndWow.apk"; // You can set a custom file name here
+    link.click();
+  };
+
   return (
     <div className="w-full mt-6 sm:mt-10 lg:mt-20 text-center text-primary">
       <div className="px-4 max-w-7xl mx-auto">
@@ -29,7 +38,10 @@ export default function Content() {
         <div className="absolute inset-0 bg-gradient-to-t from-[#045AD0] to-transparent opacity-30 z-1"></div>
 
         <div className="absolute inset-0 flex items-center justify-center sm:justify-start px-4 sm:px-8 lg:px-16 xl:px-[101px] max-w-7xl mx-auto left-0 right-0">
-          <Button className="px-3 py-2 sm:px-4 lg:px-6 bg-white text-primary font-bold rounded-3xl shadow-lg hover:bg-gray-100 small-mobile:mr-[160px] sm:w-auto h-[40px] sm:h-[46px] lg:h-[60px] xl:h-[90px] flex items-center justify-center small-mobile:justify-start sm:justify-start z-10">
+          <Button
+            onClick={handleDownload}
+            className="px-3 py-2 sm:px-4 lg:px-6 bg-white text-primary font-bold rounded-3xl shadow-lg hover:bg-gray-100 small-mobile:mr-[160px] sm:w-auto h-[40px] sm:h-[46px] lg:h-[60px] xl:h-[90px] flex items-center justify-center small-mobile:justify-start sm:justify-start z-10"
+          >
             <IconDownload className="relative w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8" />
             <p className="text-base sm:text-lg lg:text-2xl xl:text-3xl font-bold ml-2 sm:ml-3 lg:ml-4">
               Tải về ngay{" "}
