@@ -94,6 +94,53 @@ export const fetchLaundryShops = async (
   }
 };
 
+export interface BookingItem {
+  id: string;
+  servicesId: string;
+  bookingId: string;
+}
+
+export interface BookingHistory {
+  id: string;
+  laundryWeight: number;
+  totalPrice: number;
+  note: string;
+  status: string;
+  shopPickupTime: string;
+  customerID: string;
+  customerName: string;
+  laundryShopID: string;
+  laundryShopName: string;
+  paymentID: number;
+  voucherId: string | null;
+  bookingItems: BookingItem[];
+}
+
+export interface BookingResponse {
+  totalCount: number;
+  pageCount: number;
+  pageSize: number;
+  pageNumber: number;
+  data: BookingHistory[];
+}
+
+export const fetchBookingHistory = async (
+  pageNo: number,
+  pageSize: number,
+): Promise<BookingResponse> => {
+  try {
+    const response = await axios.get<{ value: BookingResponse }>(
+      `${baseUrl}/Booking/bookings?PageNumber=${pageNo}&PageSize=${pageSize}`,
+    );
+
+    // Accessing the `value` object directly, which contains all necessary data
+    return response.data.value;
+  } catch (error) {
+    console.error("Error fetching booking history:", error);
+    throw error;
+  }
+};
+
 export interface FetchStatisticSystemResponse {
   value: {
     totalBookings: number;

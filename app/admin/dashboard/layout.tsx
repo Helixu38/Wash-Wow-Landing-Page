@@ -82,7 +82,7 @@ const links: NavLink[] = [
   },
   {
     label: "Orders",
-    href: "/dashboard/orders",
+    href: "/admin/dashboard/order",
     icon: <IconDeviceIpadPin className="h-5 w-5 flex-shrink-0" />,
   },
   {
