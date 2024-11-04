@@ -128,7 +128,6 @@ export const columns: ColumnDef<BookingHistory>[] = [
               Copy Shop ID
             </DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>View Details</DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
       );
