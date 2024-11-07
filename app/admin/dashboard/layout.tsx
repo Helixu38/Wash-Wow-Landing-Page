@@ -10,12 +10,12 @@ import { cn } from "@/lib/utils";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   IconArrowLeft,
-  IconBell,
+  // IconBell,
   IconBrandTabler,
-  IconCalendarEvent,
+  // IconCalendarEvent,
   IconDeviceIpadPin,
   IconWashTemperature2,
-  IconSettings,
+  // IconSettings,
   IconUsers,
 } from "@tabler/icons-react";
 import { Toaster } from "@/components/ui/toaster";
@@ -85,21 +85,21 @@ const links: NavLink[] = [
     href: "/admin/dashboard/order",
     icon: <IconDeviceIpadPin className="h-5 w-5 flex-shrink-0" />,
   },
-  {
-    label: "Booking",
-    href: "/dashboard/booking",
-    icon: <IconCalendarEvent className="h-5 w-5 flex-shrink-0" />,
-  },
-  {
-    label: "Notifications",
-    href: "/dashboard/notifications",
-    icon: <IconBell className="h-5 w-5 flex-shrink-0" />,
-  },
-  {
-    label: "Settings",
-    href: "/dashboard/settings",
-    icon: <IconSettings className="h-5 w-5 flex-shrink-0" />,
-  },
+  // {
+  //   label: "Booking",
+  //   href: "/dashboard/booking",
+  //   icon: <IconCalendarEvent className="h-5 w-5 flex-shrink-0" />,
+  // },
+  // {
+  //   label: "Notifications",
+  //   href: "/dashboard/notifications",
+  //   icon: <IconBell className="h-5 w-5 flex-shrink-0" />,
+  // },
+  // {
+  //   label: "Settings",
+  //   href: "/dashboard/settings",
+  //   icon: <IconSettings className="h-5 w-5 flex-shrink-0" />,
+  // },
   {
     label: "Logout",
     href: "/",

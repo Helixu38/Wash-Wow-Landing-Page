@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseUrl = "https://localhost:7276";
+const baseUrl = "https://fc25-171-235-157-247.ngrok-free.app";
 
 export interface FormFieldValue {
   fieldValue: string;
@@ -32,6 +32,7 @@ export async function fetchForm(): Promise<FetchFormResponse | null> {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
+        "ngrok-skip-browser-warning": "69420",
       },
     });
 
@@ -85,12 +86,16 @@ export const fetchLaundryShops = async (
   try {
     const response = await axios.get<{
       value: { data: LaundryShop[] };
-    }>(`${baseUrl}/LaundryShop?PageNo=${pageNo}&PageSize=${pageSize}`);
+    }>(`${baseUrl}/LaundryShop?PageNo=${pageNo}&PageSize=${pageSize}`, {
+      headers: {
+        "ngrok-skip-browser-warning": "69420",
+      },
+    });
 
-    return response.data.value.data; // Accessing `data` inside `value`
+    return response.data.value.data;
   } catch (error) {
     console.error("Error fetching laundry shops:", error);
-    throw error; // Rethrow the error for further handling if needed
+    throw error;
   }
 };
 
@@ -131,6 +136,11 @@ export const fetchBookingHistory = async (
   try {
     const response = await axios.get<{ value: BookingResponse }>(
       `${baseUrl}/Booking/bookings?PageNumber=${pageNo}&PageSize=${pageSize}`,
+      {
+        headers: {
+          "ngrok-skip-browser-warning": "69420",
+        },
+      },
     );
 
     // Accessing the `value` object directly, which contains all necessary data
@@ -167,6 +177,7 @@ export async function fetchSystemStatistics(): Promise<FetchStatisticSystemRespo
       method: "GET",
       headers: {
         "Content-Type": "application/json",
+        "ngrok-skip-browser-warning": "69420",
       },
     });
 

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseUrl = "https://localhost:7276";
+const baseUrl = "https://fc25-171-235-157-247.ngrok-free.app";
 
 interface UpdateStatusResponse {
   success: boolean;
@@ -14,10 +14,18 @@ export const updateFormStatus = async (
   const statusString = status === "APPROVED" ? "1" : "2";
 
   try {
-    const response = await axios.patch(`${baseUrl}/forms/${formID}/status`, {
-      formID: formID,
-      status: statusString,
-    });
+    const response = await axios.patch(
+      `${baseUrl}/forms/${formID}/status`,
+      {
+        formID: formID,
+        status: statusString,
+      },
+      {
+        headers: {
+          "ngrok-skip-browser-warning": "69420",
+        },
+      },
+    );
 
     return response.data;
   } catch (error) {
@@ -33,10 +41,18 @@ export const updateUserRole = async (
   const roleString = role === "CUSTOMER" ? "1" : "2";
 
   try {
-    const response = await axios.put(`${baseUrl}/users/${userID}/role`, {
-      userID: userID,
-      role: roleString,
-    });
+    const response = await axios.put(
+      `${baseUrl}/users/${userID}/role`,
+      {
+        userID: userID,
+        role: roleString,
+      },
+      {
+        headers: {
+          "ngrok-skip-browser-warning": "69420",
+        },
+      },
+    );
 
     return response.data;
   } catch (error) {
