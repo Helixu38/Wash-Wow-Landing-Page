@@ -2,7 +2,7 @@
 import axios from "axios";
 import https from "https"; // Import https module
 
-const baseUrl = "https://localhost:7276";
+const baseUrl = "https://fc25-171-235-157-247.ngrok-free.app";
 
 interface LoginResponse {
   token: string;
@@ -31,6 +31,7 @@ export const login = async (
       {
         headers: {
           "Content-Type": "application/json",
+          "ngrok-skip-browser-warning": "69420",
         },
         httpsAgent: agent, // Use the HTTPS agent here
       },
