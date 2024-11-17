@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseUrl = "https://fc25-171-235-157-247.ngrok-free.app";
+const baseUrl = "https://washwowbe.onrender.com";
 
 export interface FormFieldValue {
   fieldValue: string;

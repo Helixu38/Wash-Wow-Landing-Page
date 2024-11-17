@@ -2,7 +2,7 @@
 import axios from "axios";
 import https from "https"; // Import https module
 
-const baseUrl = "https://fc25-171-235-157-247.ngrok-free.app";
+const baseUrl = "https://washwowbe.onrender.com";
 
 interface LoginResponse {
   token: string;
